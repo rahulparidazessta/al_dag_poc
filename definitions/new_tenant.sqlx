@@ -1,0 +1,18 @@
+config {
+    type: 'table',
+    schema: "airflow_curated",
+    tags: ["Demo_Pipeline"],
+    dependencies: ["Creating_Stage_Table"],
+    name: "new_illion"
+}
+
+SELECT
+  t1.*
+FROM
+  `zst-dev-training.airflow_demo.september` AS t1
+LEFT JOIN
+  `zst-dev-training.airflow_demo.march` AS t2
+ON
+  t1.VendorID = t2.VendorID
+WHERE
+  t2.VendorID IS NULL
