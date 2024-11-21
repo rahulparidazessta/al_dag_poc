@@ -1,0 +1,20 @@
+config {
+    type: 'table',
+    schema: "airflow_curated",
+    tags: ["Demo_Pipeline"],
+    dependencies: ["Creating_Stage_Table"],
+    name: "Combined_Illion_Ts"
+}
+
+SELECT
+  t1.VendorID AS VendorID,
+  ${constants.COLUMNS.map(col => `t1.${col} as incoming_${col},t2.${col} as existing_${col}`).join(", ")}
+FROM
+  `zst-dev-training.airflow_demo.september` AS t1
+INNER JOIN (
+  SELECT
+    *
+  FROM
+    `zst-dev-training.airflow_demo.march` ) AS t2
+ON
+  CAST(t1.VendorID AS STRING) = CAST(t2.VendorID AS STRING)
