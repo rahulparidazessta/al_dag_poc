@@ -1,7 +1,7 @@
 config {
     type: 'table',
     schema: "airflow_curated",
-    tags: ["Demo_Pipeline"],
+    tags: ["removed_pipeline"],
     dependencies: ["Creating_Stage_Table"],
     name: "Removed_Illion"
 }
