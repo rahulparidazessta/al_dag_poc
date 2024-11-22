@@ -1,7 +1,6 @@
 const MARCH = {
     TABLE_NAME: "march",
     DATASET_NAME: "airflow_demo",
-    FOLDER_PATH: "airflow_demo_zessta",
     FILE_NAME: "dataset1",
     FILE_FORMAT: "parquet"
 };
