@@ -6,23 +6,42 @@ config {
     tags: ['Demo_Pipeline'],
 }
 
+  --   ${
+  --       create_external_table.generateExternalTableSQL(
+  --           constants.MARCH.DATASET_NAME, // Dataset Name
+  --           constants.MARCH.TABLE_NAME, // Table Name
+  --           constants.MARCH.FILE_FORMAT, // Format
+  --           constants.MARCH.FOLDER_PATH, // Folder Name
+  --           constants.MARCH.FILE_NAME // File Name
+  --       )
+  --   }
+  --   ;
+  --   ${
+  --       create_external_table.generateExternalTableSQL(
+  --           constants.SEPT.DATASET_NAME, // Dataset Name
+  --           constants.SEPT.TABLE_NAME, // Table Name
+  --           constants.SEPT.FILE_FORMAT, // Format
+  --           constants.SEPT.FOLDER_PATH, // Folder Name
+  --           constants.SEPT.FILE_NAME // File Name
+  --       )
+  --   }
   ${
       create_external_table.generateExternalTableSQL(
-          constants.MARCH.DATASET_NAME, // Dataset Name
-          constants.MARCH.TABLE_NAME, // Table Name
-          constants.MARCH.FILE_FORMAT, // Format
-          constants.MARCH.FOLDER_PATH, // Folder Name
-          constants.MARCH.FILE_NAME // File Name
+          constants.EXISTING_CONST.DATASET_NAME, // Dataset Name
+          constants.EXISTING_CONST.TABLE_NAME, // Table Name
+          constants.EXISTING_CONST.FILE_FORMAT, // Format
+          constants.EXISTING_CONST.FOLDER_PATH, // Folder Name
+          constants.EXISTING_CONST.FILE_NAME // File Name
       )
   }
   ;
   ${
       create_external_table.generateExternalTableSQL(
-          constants.SEPT.DATASET_NAME, // Dataset Name
-          constants.SEPT.TABLE_NAME, // Table Name
-          constants.SEPT.FILE_FORMAT, // Format
-          constants.SEPT.FOLDER_PATH, // Folder Name
-          constants.SEPT.FILE_NAME // File Name
+          constants.INCOMING_CONST.DATASET_NAME, // Dataset Name
+          constants.INCOMING_CONST.TABLE_NAME, // Table Name
+          constants.INCOMING_CONST.FILE_FORMAT, // Format
+          constants.INCOMING_CONST.FOLDER_PATH, // Folder Name
+          constants.INCOMING_CONST.FILE_NAME // File Name
       )
   }
   ;
