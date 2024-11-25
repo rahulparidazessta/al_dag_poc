@@ -15,19 +15,19 @@ const SEPT = {
 };
 
 const EXISTING_CONST = {
-    TABLE_NAME: "{{ var.value.existing_name }}",
-    DATASET_NAME: "{{ var.value.existing_dataset_name }}",
-    FOLDER_PATH: "{{ var.value.existing_folder_path }}",
-    FILE_NAME: "{{ var.value.existing_file_name }}",
-    FILE_FORMAT: "{{ var.value.existing_file_format }}"
+    TABLE_NAME: "{{ params.existing_name }}",
+    DATASET_NAME: "{{ params.existing_dataset_name }}",
+    FOLDER_PATH: "{{ params.existing_folder_path }}",
+    FILE_NAME: "{{ params.existing_file_name }}",
+    FILE_FORMAT: "{{ params.existing_file_format }}"
 };
 
 const INCOMING_CONST = {
-    TABLE_NAME: "{{ var.value.incoming_name }}",
-    DATASET_NAME: "{{ var.value.incoming_dataset_name }}",
-    FOLDER_PATH: "{{ var.value.incoming_folder_path }}",
-    FILE_NAME: "{{ var.value.incoming_file_name }}",
-    FILE_FORMAT: "{{ var.value.incoming_file_format }}",
+    TABLE_NAME: "{{ params.incoming_name }}",
+    DATASET_NAME: "{{ params.incoming_dataset_name }}",
+    FOLDER_PATH: "{{ params.incoming_folder_path }}",
+    FILE_NAME: "{{ params.incoming_file_name }}",
+    FILE_FORMAT: "{{ params.incoming_file_format }}",
 };
 
 const COLUMNS = [
