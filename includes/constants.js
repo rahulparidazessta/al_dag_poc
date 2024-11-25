@@ -15,20 +15,21 @@ const SEPT = {
 };
 
 const EXISTING_CONST = {
-    TABLE_NAME: "{{ params.existing_name }}",
-    DATASET_NAME: "{{ params.existing_dataset_name }}",
-    FOLDER_PATH: "{{ params.existing_folder_path }}",
-    FILE_NAME: "{{ params.existing_file_name }}",
-    FILE_FORMAT: "{{ params.existing_file_format }}"
+  TABLE_NAME: dataform.projectConfig.vars.existing_name || "march", // Default: 'march'
+  DATASET_NAME: dataform.projectConfig.vars.existing_dataset_name || "airflow_demo", // Default: 'airflow_demo'
+  FOLDER_PATH: dataform.projectConfig.vars.existing_folder_path || "airflow_demo_zessta", // Default: 'airflow_demo_zessta'
+  FILE_NAME: dataform.projectConfig.vars.existing_file_name || "dataset1", // Default: 'dataset1'
+  FILE_FORMAT: dataform.projectConfig.vars.existing_file_format || "parquet" // Default: 'parquet'
 };
 
 const INCOMING_CONST = {
-    TABLE_NAME: "{{ params.incoming_name }}",
-    DATASET_NAME: "{{ params.incoming_dataset_name }}",
-    FOLDER_PATH: "{{ params.incoming_folder_path }}",
-    FILE_NAME: "{{ params.incoming_file_name }}",
-    FILE_FORMAT: "{{ params.incoming_file_format }}",
+  TABLE_NAME: dataform.projectConfig.vars.incoming_name || "march", // Default: 'march'
+  DATASET_NAME: dataform.projectConfig.vars.incoming_dataset_name || "airflow_demo", // Default: 'airflow_demo'
+  FOLDER_PATH: dataform.projectConfig.vars.incoming_folder_path || "airflow_demo_zessta", // Default: 'airflow_demo_zessta'
+  FILE_NAME: dataform.projectConfig.vars.incoming_file_name || "dataset2", // Default: 'dataset2'
+  FILE_FORMAT: dataform.projectConfig.vars.incoming_file_format || "csv" // Default: 'csv'
 };
+
 
 const COLUMNS = [
     "streetno",
